@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Cancer Predictor</title>
+      <link rel="stylesheet" href="/static/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="jumbotron">
+              <h1 class="title">Cancer Prediction Website</h1>
+             <!--<p class="subtitle">To use our churn predictor, enter in the data in the appropriate fields and submit to view the prediction.</p>--> 
+            </div>
+
+        </div>
+
+        </body>
+
+      </br>
+    </br>
+        <form action="/predict" name="cancer" method="POST">
+          <div class="form">
+            <div class="form-control">
+                <label class="placeholder">Mean Radius</label>
+                <div class="col-sm-10">
+                  <input type="text" class="input-container ic1" name="radius">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="placeholder">Mean Texture</label>
+                <div class="col-sm-10">
+                  <input type="text" class="input-container ic1" name="texture">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="placeholder">Mean Radius</label>
+                <div class="col-sm-10">
+                  <input type="text" class="input-container ic1" name="radius">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="placeholder">Mean Perimeter</label>
+                <div class="col-sm-10">
+                  <input type="text" class="input-container ic1" name="perimeter">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="placeholder">Mean Area</label>
+                <div class="col-sm-10">
+                  <input type="text" class="input-container ic1" name="area">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="placeholder">Mean Smoothness</label>
+                <div class="col-sm-10">
+                  <input type="text" class="input-container ic1" name="smoothness">
+                </div>
+            </div>
+
+          </div>
+              <br>
+
+            <div class="submit">
+               
+                    <button type="submit" class="submit" onclick="green">Submit</button>
+
+            </div>
+            <br>
+            <br>
+        </form>
+        <div class="subtitle">
+          {% if pred != "": %}
+            <h2> Prediction: {{pred}} </h2>
+
+          {% endif %}
+
+          <p><i> Submit to get a prediction...</i></p>
+        </div>
+    </body>
+</html>
