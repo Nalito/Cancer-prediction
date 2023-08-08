@@ -1,0 +1,4 @@
+flask>=2.2.3
+gunicorn>=20.1.0
+pickle>=3.8
+numpy>=1.19.5
