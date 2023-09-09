@@ -1,4 +1,4 @@
 flask>=2.2.3
 gunicorn>=20.1.0
 numpy>=1.19.5
-scikit-learn>=1.2.2
+sklearn>=0.0.post1
